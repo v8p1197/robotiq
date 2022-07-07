@@ -48,7 +48,17 @@
  #include <stdbool.h>
 #include <string>
 
+// Definitions
 #define MP_BUFF_SIZE    1024
+#define REGISTER_SELECT_OUTPUT 410
+#define REGISTER_SERIAL_NUMBER 510
+#define REGISTER_PRODUCTION_YEAR 514
+#define REGISTER_FIRMWARE_VERSION 500
+#define RQ_COM_MAX_STR_LENGTH 20
+#define RQ_COM_JAM_SIGNAL_CHAR      0xff
+#define RQ_COM_JAM_SIGNAL_LENGTH    50
+#define RQ_COM_TIMER_FOR_STREAM_DETECTION_MAX_VALUE 20 //20 * 4ms =  80ms without bytes means that the stream is stopped
+#define RQ_COM_TIMER_FOR_VALID_STREAM_MAX_VALUE     40 //40 * 4ms = 160ms without any valid message means that the communication is not working well
 
 INT_8 rq_sensor_com();
 INT_8 rq_sensor_com(const std::string&);
