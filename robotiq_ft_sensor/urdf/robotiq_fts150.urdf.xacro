@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="robotiq_fts150">
 
+    <material name="black">
+        <color rgba="0.1961 0.1961 0.1961 1.0"/>
+    </material>
+
     <xacro:macro name="robotiq_fts150" params="parent prefix *origin">
 
         <!-- mount the fts to the robot -->
